@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -52,12 +53,24 @@ public class FundServlet extends HttpServlet {
                 FundDao fundDao2 = new FundDaoJDBCImpl();
                 Fund fund2 = fundDao2.findById(fundId2);
                 request.setAttribute("fundDelete",fund2);
+                request.getRequestDispatcher("fund/fund_delete.jsp").forward(request, response); //step 4
                 break;
             case "5":
                 //updateRes
-
+                Integer fundId5 = Integer.parseInt(request.getParameter("fundId"));
+                String fundName = request.getParameter("fundName");
+                Double fundPrice = Double.valueOf(request.getParameter("fundPrice"));
+                String fundDes = request.getParameter("fundDes");
+                String fundStatus = request.getParameter("fundStatus");
+                FundDao fundDao3 = new FundDaoJDBCImpl();
+                Fund fund3 = new Fund(fundId5,fundName,fundDes,fundPrice,fundStatus,new Date());
+                fundDao3.update(fund3);
+                List<Fund> funds1 = fundDao3.findAll();  //step 2
+                request.setAttribute("fundList", funds1);// step 3
+                request.getRequestDispatcher("fund/fund_list.jsp").forward(request, response); //step 4
                 break;
             case "6":
+                //addRes
 
                 break;
 

@@ -13,18 +13,18 @@
 <body>
 <%
     request.setCharacterEncoding("utf-8");
-    Integer fundId = Integer.parseInt(request.getParameter("fundId"));
-    String fundName = request.getParameter("fundName");
-    Double fundPrice = Double.valueOf(request.getParameter("fundPrice"));
-    String fundDes = request.getParameter("fundDes");
-    String fundStatus = request.getParameter("fundStatus");
+//    Integer fundId = Integer.parseInt(request.getParameter("fundId"));
+//    String fundName = request.getParameter("fundName");
+//    Double fundPrice = Double.valueOf(request.getParameter("fundPrice"));
+//    String fundDes = request.getParameter("fundDes");
+//    String fundStatus = request.getParameter("fundStatus");
 
-    Fund fund = new Fund(fundId,fundName,fundDes,fundPrice,fundStatus,new Date());
+    //Fund fund = new Fund(fundId,fundName,fundDes,fundPrice,fundStatus,new Date());
 
-    FundDao fundDao = new FundDaoJDBCImpl();
-    fundDao.update(fund);
+    //FundDao fundDao = new FundDaoJDBCImpl();
+    //fundDao.update(fund);
 %>
-<jsp:forward page="fund_list.jsp"></jsp:forward>
+
 
 </body>
 </html>
