@@ -7,6 +7,10 @@
         <element id="directory" name="classes">
           <element id="module-output" name="fundtrans" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="JUnit4" module-name="fundtrans" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/mysql-connector-java-5.0.5-bin.jar" />
+        </element>
       </element>
     </root>
   </artifact>

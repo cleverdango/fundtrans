@@ -44,12 +44,17 @@ public class FundServlet extends HttpServlet {
                 FundDao fundDao1 = new FundDaoJDBCImpl();
                 Fund  fund1 = fundDao1.findById(fundId);
                 request.setAttribute("fundUpdate",fund1);
+                request.getRequestDispatcher("fund/fund_update.jsp").forward(request, response); //step 4
                 break;
             case "4":
                 //delete
-
+                int fundId2 = Integer.parseInt(request.getParameter("id"));
+                FundDao fundDao2 = new FundDaoJDBCImpl();
+                Fund fund2 = fundDao2.findById(fundId2);
+                request.setAttribute("fundDelete",fund2);
                 break;
             case "5":
+                //updateRes
 
                 break;
             case "6":

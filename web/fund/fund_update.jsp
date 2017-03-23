@@ -44,7 +44,7 @@
         Fund fund = (Fund)request.getAttribute("fundUpdate");
 
     %>
-    <form name="form1" action="fund/fund_updateRes.jsp" method="post"
+    <form name="form1" action="Fund?type=5&id=<%=fund.getId()%>" method="post"
           onSubmit="return checkNull()">
         <p>
             <input class="text-input large-input" type="hidden"
