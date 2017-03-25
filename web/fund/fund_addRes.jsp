@@ -15,17 +15,9 @@
 <%
 	//1.获取表单数据,如果有中文，应该先设置request编码
 	request.setCharacterEncoding("utf-8");
-	String fundName = request.getParameter("fundName");
-	Double fundPrice = Double.valueOf(request.getParameter("fundPrice"));
-	String fundDes = request.getParameter("fundDes");
-	String fundStatus = request.getParameter("fundStatus");
-	
-	Fund fund = new Fund(0,fundName,fundDes,fundPrice,fundStatus,new Date());
-	
-	FundDao fundDao = new FundDaoJDBCImpl();
-	fundDao.insert(fund);
+
 	
 %>
-<jsp:forward page="fund_list.jsp"></jsp:forward>
+
 </body>
 </html>

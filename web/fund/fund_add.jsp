@@ -31,7 +31,7 @@
 </div>
 
 <div class="content-box-content">
-    <form name="form1" action="fund/fund_addRes.jsp" method="post"
+    <form name="form1" action="Fund?type=6" method="post"
           onSubmit="return checkNull()">
         <p>
             基金名字：<input class="text-input large-input" type="text"

@@ -51,9 +51,10 @@ public class FundServlet extends HttpServlet {
                 //delete
                 int fundId2 = Integer.parseInt(request.getParameter("id"));
                 FundDao fundDao2 = new FundDaoJDBCImpl();
-                Fund fund2 = fundDao2.findById(fundId2);
-                request.setAttribute("fundDelete",fund2);
-                request.getRequestDispatcher("fund/fund_delete.jsp").forward(request, response); //step 4
+                fundDao2.delete(fundId2);
+                List<Fund> funds2 = fundDao2.findAll();  //step 2
+                request.setAttribute("fundList", funds2);// step 3
+                request.getRequestDispatcher("fund/fund_list.jsp").forward(request, response); //step 4
                 break;
             case "5":
                 //updateRes
@@ -71,8 +72,20 @@ public class FundServlet extends HttpServlet {
                 break;
             case "6":
                 //addRes
+                String fundName1 = request.getParameter("fundName");
+                Double fundPrice1 = Double.valueOf(request.getParameter("fundPrice"));
+                String fundDes1 = request.getParameter("fundDes");
+                String fundStatus1 = request.getParameter("fundStatus");
 
+                Fund fund = new Fund(0,fundName1,fundDes1,fundPrice1,fundStatus1,new Date());
+
+                FundDao fundDao4 = new FundDaoJDBCImpl();
+                fundDao4.insert(fund);
+                List<Fund> funds3 = fundDao4.findAll();
+                request.setAttribute("fundList", funds3);// step 3
+                request.getRequestDispatcher("fund/fund_list.jsp").forward(request, response); //step 4
                 break;
+            case "7":
 
             default:
                 break;

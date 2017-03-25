@@ -37,10 +37,7 @@
 <div class="content-box-content">
     <%
         request.setCharacterEncoding("utf-8");
-        //String str =request.getParameter("id");
-        //int fundId = Integer.parseInt(str);
-        //FundDao fundDao = new FundDaoJDBCImpl();
-        //Fund fund = fundDao.findById(fundId);
+
         Fund fund = (Fund)request.getAttribute("fundUpdate");
 
     %>
