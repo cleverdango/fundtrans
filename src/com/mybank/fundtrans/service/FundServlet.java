@@ -63,8 +63,9 @@ public class FundServlet extends HttpServlet {
                 Double fundPrice = Double.valueOf(request.getParameter("fundPrice"));
                 String fundDes = request.getParameter("fundDes");
                 String fundStatus = request.getParameter("fundStatus");
-                FundDao fundDao3 = new FundDaoJDBCImpl();
+
                 Fund fund3 = new Fund(fundId5,fundName,fundDes,fundPrice,fundStatus,new Date());
+                FundDao fundDao3 = new FundDaoJDBCImpl();
                 fundDao3.update(fund3);
                 List<Fund> funds1 = fundDao3.findAll();  //step 2
                 request.setAttribute("fundList", funds1);// step 3
