@@ -60,12 +60,14 @@
             <textarea class="text-input textarea" rows="16" cols="50"
                       name="fundDes" ><%=fund.getDescription()%></textarea>
         </p>
+        <%
 
+            if (fund.getStatus().equals("N"))
+
+        %>
         <p>
-            基金状态： <input type="radio" name="fundStatus" value="Y"
-
-        >可交易
-            <input type="radio" name="fundStatus" value="N"/>不可交易
+            基金状态： <input type="radio" name="fundStatus" value="Y"  <% if (fund.getStatus().equals("Y")) out.print("checked");%> />可交易
+            <input type="radio" name="fundStatus" value="N"<% if (fund.getStatus().equals("N")) out.print("checked");%>/>不可交易
         </p>
         <p>
             <input class="button" type="submit" value="修改"/> <input

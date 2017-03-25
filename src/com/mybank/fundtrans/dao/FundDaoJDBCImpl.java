@@ -90,16 +90,16 @@ public class FundDaoJDBCImpl implements FundDao {
     @Override
     public void update(Fund fund) {
         conn = JDBCUtil.getConnection();
-        String sql = "UPDATE fund SET name = ?,description= ? ,price= ? ,status= ? ,createTime= ? WHERE id = ?";
+        String sql = "UPDATE fund SET name = ?,description= ? ,price= ? ,status= ?  WHERE id = ?";
         try {
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, fund.getName());
             pstmt.setString(2, fund.getDescription());
             pstmt.setDouble(3, fund.getPrice());
             pstmt.setString(4, fund.getStatus());
-            java.sql.Date date = new java.sql.Date(fund.getCreateTime().getDate());
-            pstmt.setDate(5, date);
-            pstmt.setInt(6, fund.getId());
+            //java.sql.Date date = new java.sql.Date(fund.getCreateTime().getDate());
+            //pstmt.setDate(5, date);
+            pstmt.setInt(5, fund.getId());
             int rus = pstmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
