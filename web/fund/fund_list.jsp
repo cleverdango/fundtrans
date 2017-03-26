@@ -35,10 +35,10 @@
 
         //FundDao fundDao = new FundDaoJDBCImpl();
 
-        //List<Fund> funds = (List) request.getAttribute("fundList");
+        List<Fund> funds = (List) request.getAttribute("fundList");
         String status = "";
-        PageBean pageBean =(PageBean) request.getAttribute("fundList");
-        List<Fund> funds = pageBean.getData();
+        //PageBean pageBean =(PageBean) request.getAttribute("fundList");
+       // List<Fund> funds = pageBean.getData();
         for (Fund fund : funds) {
     %>
     <tr>
