@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@page import="java.text.DecimalFormat"%>
+<%@ page import="com.mybank.fundtrans.controller.SessionCounter" %>
 
 <%
 	String path = request.getContextPath();
@@ -67,7 +68,9 @@
 				<div id="profile-links">
 					<p>
 						<a>欢迎您${sessionScope.user}<br></a> <a href="" title="密码修改" target="dmMain">密码修改
-						</a>| <a href="user?type=2" title="退出系统" target="_top">退出</a>
+						</a>| <a href="User?type=2" title="退出系统" target="_top">退出</a>
+						<br>
+						当前在线人数：<%=SessionCounter.getActiveSessions()%>
 					</p>
 				</div>
 
