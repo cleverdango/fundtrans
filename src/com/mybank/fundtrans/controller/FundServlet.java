@@ -25,8 +25,9 @@ public class FundServlet extends HttpServlet {
      * 4. 请求转发到jsp或者servlet
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setCharacterEncoding("utf-8");
+
         String type = request.getParameter("type"); // step1
+        FundDao fundDao = new FundDaoJDBCImpl();
         switch (type) {
             case "1":
                 //add
@@ -34,7 +35,6 @@ public class FundServlet extends HttpServlet {
                 break;
             case "2":
                 //list
-                FundDao fundDao = new FundDaoJDBCImpl();
                 List<Fund> funds = fundDao.findAll();  //step 2
                 request.setAttribute("fundList", funds);// step 3
                 request.getRequestDispatcher("fund/fund_list.jsp").forward(request, response); //step 4
@@ -42,17 +42,15 @@ public class FundServlet extends HttpServlet {
             case "3":
                 //update
                 int fundId = Integer.parseInt(request.getParameter("id"));
-                FundDao fundDao1 = new FundDaoJDBCImpl();
-                Fund  fund1 = fundDao1.findById(fundId);
+                Fund  fund1 = fundDao.findById(fundId);
                 request.setAttribute("fundUpdate",fund1);
                 request.getRequestDispatcher("fund/fund_update.jsp").forward(request, response); //step 4
                 break;
             case "4":
                 //delete
                 int fundId2 = Integer.parseInt(request.getParameter("id"));
-                FundDao fundDao2 = new FundDaoJDBCImpl();
-                fundDao2.delete(fundId2);
-                List<Fund> funds2 = fundDao2.findAll();  //step 2
+                fundDao.delete(fundId2);
+                List<Fund> funds2 = fundDao.findAll();  //step 2
                 request.setAttribute("fundList", funds2);// step 3
                 request.getRequestDispatcher("fund/fund_list.jsp").forward(request, response); //step 4
                 break;
@@ -65,9 +63,9 @@ public class FundServlet extends HttpServlet {
                 String fundStatus = request.getParameter("fundStatus");
 
                 Fund fund3 = new Fund(fundId5,fundName,fundDes,fundPrice,fundStatus,new Date());
-                FundDao fundDao3 = new FundDaoJDBCImpl();
-                fundDao3.update(fund3);
-                List<Fund> funds1 = fundDao3.findAll();  //step 2
+
+                fundDao.update(fund3);
+                List<Fund> funds1 = fundDao.findAll();  //step 2
                 request.setAttribute("fundList", funds1);// step 3
                 request.getRequestDispatcher("fund/fund_list.jsp").forward(request, response); //step 4
                 break;
@@ -80,9 +78,9 @@ public class FundServlet extends HttpServlet {
 
                 Fund fund = new Fund(0,fundName1,fundDes1,fundPrice1,fundStatus1,new Date());
 
-                FundDao fundDao4 = new FundDaoJDBCImpl();
-                fundDao4.insert(fund);
-                List<Fund> funds3 = fundDao4.findAll();
+
+                fundDao.insert(fund);
+                List<Fund> funds3 = fundDao.findAll();
                 request.setAttribute("fundList", funds3);// step 3
                 request.getRequestDispatcher("fund/fund_list.jsp").forward(request, response); //step 4
                 break;
