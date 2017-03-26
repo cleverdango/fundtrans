@@ -17,6 +17,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="resources/css/bootstrap.css" type="text/css"/>
     <title>Insert title here</title>
+    <%@include file="../common/cssjs.inc"%>
 </head>
 <body>
 <h2 class="text-center">基金产品查询结果</h2>
@@ -34,9 +35,10 @@
 
         //FundDao fundDao = new FundDaoJDBCImpl();
 
-        List<Fund> funds = (List) request.getAttribute("fundList");
+        //List<Fund> funds = (List) request.getAttribute("fundList");
         String status = "";
-        //List<Fund> funds = fundDao.findAll();
+        PageBean pageBean =(PageBean) request.getAttribute("fundList");
+        List<Fund> funds = pageBean.getData();
         for (Fund fund : funds) {
     %>
     <tr>
@@ -64,7 +66,9 @@
     <%
         }
     %>
-
+    <form action="Fund?/type=2" method="post">
+        <%@include file="../common/page.jsp"%>
+    </form>
 
 </table>
 </body>

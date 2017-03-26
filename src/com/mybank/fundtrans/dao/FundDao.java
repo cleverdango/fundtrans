@@ -13,4 +13,5 @@ public interface FundDao {
 	void delete(int fundNo);
 	void update(Fund fund);
 	Fund findById(int fundNo);
+
 }
