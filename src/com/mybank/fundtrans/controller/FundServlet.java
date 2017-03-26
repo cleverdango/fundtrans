@@ -1,4 +1,4 @@
-package com.mybank.fundtrans.service;
+package com.mybank.fundtrans.controller;
 
 import com.mybank.fundtrans.dao.FundDao;
 import com.mybank.fundtrans.dao.FundDaoJDBCImpl;

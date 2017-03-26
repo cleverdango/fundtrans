@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * Created by yazawanico on 2017/3/20.
  */
-//@WebFilter(filterName = "/*")
+@WebFilter(dispatcherTypes = {DispatcherType.REQUEST},urlPatterns = {"/*"})
 
 
 //todo

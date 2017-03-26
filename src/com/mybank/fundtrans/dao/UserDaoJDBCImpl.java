@@ -24,17 +24,17 @@ public class UserDaoJDBCImpl implements UserDao {
         String sql = "select * from user where name = ? and password = ?";
         //3创建preparedStatement对象
         try {
-            PreparedStatement preparedStatement = pstmt = conn.prepareStatement(sql);
+            PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, userName);
             pstmt.setString(2, password);
             rs = pstmt.executeQuery();
-            if (rs.next()){
-                flag=true;
+            if (rs.next()) {
+                flag = true;
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        }finally {
-            JDBCUtil.close(rs,pstmt,conn);
+        } finally {
+            JDBCUtil.close(rs, pstmt, conn);
         }
 
 

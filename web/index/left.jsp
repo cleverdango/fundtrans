@@ -66,8 +66,8 @@
 				</h1>
 				<div id="profile-links">
 					<p>
-						<a>欢迎您<br></a> <a href="" title="密码修改" target="dmMain">密码修改
-						</a>| <a href="" title="退出系统" target="_top">退出</a>
+						<a>欢迎您${sessionScope.user}<br></a> <a href="" title="密码修改" target="dmMain">密码修改
+						</a>| <a href="User?type=2" title="退出系统" target="_top">退出</a>
 					</p>
 				</div>
 
