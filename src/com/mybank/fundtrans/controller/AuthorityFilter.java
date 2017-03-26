@@ -1,4 +1,4 @@
-﻿package com.mybank.fundtrans.controller;
+package com.mybank.fundtrans.controller;
 
 import java.io.IOException;
 
