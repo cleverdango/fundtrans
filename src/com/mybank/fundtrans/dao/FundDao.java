@@ -13,4 +13,6 @@ public interface FundDao {
 	void delete(int fundNo);
 	void update(Fund fund);
 	Fund findById(int fundNo);
+	List findByPage(int pageNo, int pageSize); //获取一页的基金记录,返回Fund对象列表
+	int  findRowCount();    //查找记录总数
 }
