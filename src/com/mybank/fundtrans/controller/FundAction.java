@@ -7,7 +7,6 @@ import com.mybank.fundtrans.service.FundService;
 import com.mybank.fundtrans.service.FundServiceImpl;
 import com.mybank.fundtrans.util.PageBean;
 import com.opensymphony.xwork2.ActionSupport;
-
 import java.util.Date;
 
 /**
@@ -16,6 +15,7 @@ import java.util.Date;
 public class FundAction extends ActionSupport {
     private Fund fund;
     private PageBean fundList;
+    private Integer fundId;
     private Integer pageNo = 1;
     private FundDao fundDao = new FundDaoJDBCImpl();
 
@@ -29,8 +29,38 @@ public class FundAction extends ActionSupport {
     //处理显示基金列表请求
     public String show() {
         FundService fundService = new FundServiceImpl();
+
         fundList = fundService.getFunds(pageNo);
-        return "showFunds";
+        return "renderFundList";
+    }
+
+    public String delete(){
+        fundDao.delete(fund.getId());
+        return SUCCESS;
+    }
+    public String update(){
+        fundDao.update(fund);
+        return SUCCESS;
+    }
+    public String preUpdate(){
+        fund = fundDao.findById(fundId);
+        return "prepared";
+    }
+    public void setPageNo(Integer pageNo) {
+        this.pageNo = pageNo;
+    }
+
+    public Integer getPageNo() {
+
+        return pageNo;
+    }
+
+    public Integer getFundId() {
+        return fundId;
+    }
+
+    public void setFundId(Integer fundId) {
+        this.fundId = fundId;
     }
 
     public Fund getFund() {

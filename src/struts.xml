@@ -16,13 +16,7 @@
     <constant name="struts.convention.package.locators" value="action,actions,struts,struts2"/>
 
     <package name="fund" namespace="/fund" extends="struts-default">
-        <global-results>
-            <result name="error">/error.jsp</result>
-        </global-results>
 
-        <global-exception-mappings>
-            <exception-mapping exception="java.lang.Exception" result="error"/>
-        </global-exception-mappings>
         <!-- 动态方法调用测试 -->
         <action name="fundAction" class="com.mybank.fundtrans.controller.FundAction">
         	<result name="login">/login.jsp</result>
@@ -32,7 +26,13 @@
         <action name="*Fund" class="com.mybank.fundtrans.controller.FundAction"
           method="{1}">
         	<result name="success" type="chain">showFund</result><!-- 默认的type是dispatcher -->
-            <result name="showFunds">/fund/fund_list.jsp</result>
+            <result name="renderFundList">/fund/fund_list.jsp</result>
+
+        </action>
+
+        <action name="preUpdate" class="com.mybank.fundtrans.controller.FundAction"
+                method="preUpdate">
+            <result name="prepared">/fund/fund_update.jsp</result>
         </action>
         <!-- 用于链接请求 -->
         

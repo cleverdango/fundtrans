@@ -80,8 +80,8 @@
 							基金产品管理
 					</a>
 						<ul>
-							<li><a href="Fund?type=1" target="dmMain">新增基金产品</a></li>
-							<li><a href="Fund?type=2" target="dmMain">基金产品查询</a></li>
+							<li><a href="/fund/fund_add.action" target="dmMain">新增基金产品</a></li>
+							<li><a href="/fund/showFund.action" target="dmMain">基金产品查询</a></li>
 						</ul></li>
 					<li><a href="#" class="nav-top-item"> <!-- Add the class "no-submenu" to menu items with no sub menu -->
 							客户信息管理
