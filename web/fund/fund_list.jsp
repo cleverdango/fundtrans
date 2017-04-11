@@ -34,10 +34,10 @@
 
         //FundDao fundDao = new FundDaoJDBCImpl();
 
-        List<Fund> funds = (List) request.getAttribute("fundList");
+        //List<Fund> funds = (List<Fund>)request.getAttribute("fundList");
         String status = "";
         //List<Fund> funds = fundDao.findAll();
-        for (Fund fund : funds) {
+        //for (Fund fund : funds) {
     %>
     <tr>
         <td><%=fund.getId() %>

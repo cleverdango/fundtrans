@@ -31,7 +31,8 @@
 		<!-- 使用通配符简化配置 -->
         <action name="*Fund" class="com.mybank.fundtrans.controller.FundAction"
           method="{1}">
-        	<result name="success">/index.jsp</result>
+        	<result name="success" type="chain">showFund</result><!-- 默认的type是dispatcher -->
+            <result name="showFunds">/fund/fund_list.jsp</result>
         </action>
         <!-- 用于链接请求 -->
         
