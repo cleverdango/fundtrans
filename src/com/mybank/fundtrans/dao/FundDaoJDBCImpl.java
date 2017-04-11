@@ -140,5 +140,56 @@ public class FundDaoJDBCImpl implements FundDao {
         }
         return fund;
     }
+    public List findByPage(int pageNo, int pageSize) {
+        // TODO Auto-generated method stub
+        List funds = new ArrayList<Fund>();
+        try {
+            conn = JDBCUtil.getConnection();
+            String sql = "select * from fund limit ?, ?"; //limit
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setInt(1, (pageNo-1)*pageSize);
+            pstmt.setInt(2, pageSize);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                Fund fund = new Fund();
+                fund.setId(rs.getInt("id"));
+                fund.setName(rs.getString("name"));
+                fund.setPrice(rs.getDouble("price"));
+                fund.setDescription(rs.getString("description"));
+                fund.setStatus(rs.getString("status"));
+                fund.setCreateTime(rs.getDate("createtime"));
+                funds.add(fund);
+            }
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            //throw new DAOException(e.getMessage(), e);
+        } finally {
+            JDBCUtil.close(null, pstmt, conn);
+        }
+        return funds;
+    }
+
+    @Override
+    public int findRowCount() {
+        int count=0;
+        // TODO Auto-generated method stub
+        try {
+            conn = JDBCUtil.getConnection();
+            String sql = "select count(*) from fund";
+            pstmt = conn.prepareStatement(sql);
+            ResultSet rs = pstmt.executeQuery();
+            if (rs.next()) {
+                count=rs.getInt(1);
+            }
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            //throw new DAOException(e.getMessage(), e);
+        } finally {
+            JDBCUtil.close(null, pstmt, conn);
+        }
+        return count;
+    }
 
 }

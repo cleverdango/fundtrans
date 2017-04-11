@@ -31,24 +31,24 @@
 </div>
 
 <div class="content-box-content">
-    <form name="form1" action="Fund?type=6" method="post"
+    <form name="form1" action="fund/addFund.action" method="post"
           onSubmit="return checkNull()">
         <p>
             基金名字：<input class="text-input large-input" type="text"
-                        name="fundName"/>
+                        name="fund.name"/>
         </p>
         <p>
             基金价格：<input class="text-input large-input" type="text"
-                        name="fundPrice"/>
+                        name="fund.price"/>
         </p>
         <p>
             基金描述：
             <textarea class="text-input textarea" rows="16" cols="50"
-                      name="fundDes"></textarea>
+                      name="fund.description"></textarea>
         </p>
         <p>
-            基金状态： <input type="radio" name="fundStatus" value="Y" checked/>可交易
-            <input type="radio" name="fundStatus" value="N"/>不可交易
+            基金状态： <input type="radio" name="fund.status" value="Y" checked/>可交易
+            <input type="radio" name="fund.status" value="N"/>不可交易
         </p>
         <p>
             <input class="button" type="submit" value="新增" /> <input

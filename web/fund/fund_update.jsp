@@ -36,29 +36,29 @@
 
 <div class="content-box-content">
     <%
-        request.setCharacterEncoding("utf-8");
 
-        Fund fund = (Fund)request.getAttribute("fundUpdate");
+
+        Fund fund = (Fund)request.getAttribute("Fund");
 
     %>
-    <form name="form1" action="Fund?type=5" method="post"
+    <form name="form1" action="fund/updateFund.action" method="post"
           onSubmit="return checkNull()">
         <p>
             <input class="text-input large-input" type="hidden"
-                        name="fundId" value="<%=fund.getId()%>"/>
+                        name="fund.id" value="<%=fund.getId()%>"/>
         </p>
         <p>
             基金名字：<input class="text-input large-input" type="text"
-                        name="fundName" value="<%=fund.getName()%>"/>
+                        name="fund.name" value="<%=fund.getName()%>"/>
         </p>
         <p>
             基金价格：<input class="text-input large-input" type="text"
-                        name="fundPrice" value="<%=fund.getPrice()%>"/>
+                        name="fund.price" value="<%=fund.getPrice()%>"/>
         </p>
         <p>
             基金描述：
             <textarea class="text-input textarea" rows="16" cols="50"
-                      name="fundDes" ><%=fund.getDescription()%></textarea>
+                      name="fund.description" ><%=fund.getDescription()%></textarea>
         </p>
         <%
 
@@ -66,8 +66,8 @@
 
         %>
         <p>
-            基金状态： <input type="radio" name="fundStatus" value="Y"  <% if (fund.getStatus().equals("Y")) out.print("checked");%> />可交易
-            <input type="radio" name="fundStatus" value="N"<% if (fund.getStatus().equals("N")) out.print("checked");%>/>不可交易
+            基金状态： <input type="radio" name="fund.status" value="Y"  <% if (fund.getStatus().equals("Y")) out.print("checked");%> />可交易
+            <input type="radio" name="fund.status" value="N"<% if (fund.getStatus().equals("N")) out.print("checked");%>/>不可交易
         </p>
         <p>
             <input class="button" type="submit" value="修改"/> <input

@@ -35,10 +35,11 @@
 
         //FundDao fundDao = new FundDaoJDBCImpl();
 
-        List<Fund> funds = (List) request.getAttribute("fundList");
+        //List<Fund> funds = (List<Fund>)request.getAttribute("fundList");
         String status = "";
-        //PageBean pageBean =(PageBean) request.getAttribute("fundList");
-       // List<Fund> funds = pageBean.getData();
+        //List<Fund> funds = fundDao.findAll();
+        PageBean pageBean = (PageBean)request.getAttribute("fundList");
+        List<Fund> funds = pageBean.getData();
         for (Fund fund : funds) {
     %>
     <tr>
@@ -59,17 +60,19 @@
         <td><%=fund.getCreateTime() %>
         </td>
         <td>
-            <a href="Fund?type=3&id=<%=fund.getId() %>">修改</a>
-            <a href="Fund?type=4&id=<%=fund.getId() %>">删除</a>
+            <a href="fund/preUpdate.action?fundId=<%=fund.getId() %>">修改</a>
+            <a href="fund/deleteFund.action?fund.id=<%=fund.getId() %>">删除</a>
         </td>
     </tr>
     <%
         }
     %>
-    <form action="Fund?/type=2" method="post">
-        <%@include file="../common/page.jsp"%>
-    </form>
+
 
 </table>
+
+<form name="PageForm" action="fund/showFund.action" method="post">
+    <%@ include file="../common/page.jsp"%>
+</form>
 </body>
 </html>
