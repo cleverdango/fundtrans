@@ -1,7 +1,6 @@
 <%@ page import="com.mybank.fundtrans.dao.FundDao" %>
 <%@ page import="com.mybank.fundtrans.dao.FundDaoJDBCImpl" %>
 <%@ page import="com.mybank.fundtrans.domain.Fund" %>
-<%@ page import="java.util.Date" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%
@@ -60,11 +59,6 @@
             <textarea class="text-input textarea" rows="16" cols="50"
                       name="fund.description" ><%=fund.getDescription()%></textarea>
         </p>
-        <%
-
-            if (fund.getStatus().equals("N"))
-
-        %>
         <p>
             基金状态： <input type="radio" name="fund.status" value="Y"  <% if (fund.getStatus().equals("Y")) out.print("checked");%> />可交易
             <input type="radio" name="fund.status" value="N"<% if (fund.getStatus().equals("N")) out.print("checked");%>/>不可交易
