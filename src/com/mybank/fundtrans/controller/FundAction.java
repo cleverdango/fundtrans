@@ -1,6 +1,7 @@
 package com.mybank.fundtrans.controller;
 
 import com.mybank.fundtrans.dao.FundDao;
+import com.mybank.fundtrans.dao.FundDaoHibImpl;
 import com.mybank.fundtrans.dao.FundDaoJDBCImpl;
 import com.mybank.fundtrans.domain.Fund;
 import com.mybank.fundtrans.service.FundService;
@@ -18,11 +19,12 @@ public class FundAction extends ActionSupport {
     private Integer fundId;
     private Integer pageNo = 1;
     private FundDao fundDao = new FundDaoJDBCImpl();
+    private FundDao fundDao2 = new FundDaoHibImpl();
 
     //处理新增基金请求
     public String add() {
         fund.setCreateTime(new Date());
-        fundDao.insert(fund);
+        fundDao2.insert(fund);
         return SUCCESS;
     }
 
