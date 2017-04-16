@@ -11,10 +11,20 @@ import java.util.List;
 /**
  * Created by yazawanico on 2017/4/16.
  */
+
+/**
+ * 1.获取session对象
+ * 2.开启事务
+ * 3.开始增删改
+ * 4.提交事务
+ * 5.关闭session对象
+ */
 public class FundDaoHibImpl implements FundDao {
     @Override
     public List findAll() {
 
+        Session session = HibernateUtil.currentSession();
+        
         return null;
     }
 

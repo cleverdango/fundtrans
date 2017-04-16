@@ -13,8 +13,7 @@ public class HibernateUtil {
 			// 使用默认的hibernate.cfg.xml配置文件创建Configuration实例
 			Configuration cfg = new Configuration().configure();
 			// 以Configuration实例来创建SessionFactory实例
-			ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(cfg.getProperties())
-					.build();
+			ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().configure().build();
 			sessionFactory = cfg.buildSessionFactory(serviceRegistry);
 		} catch (Throwable ex) {
 			System.err.println("Initial SessionFactory creation failed." + ex);
