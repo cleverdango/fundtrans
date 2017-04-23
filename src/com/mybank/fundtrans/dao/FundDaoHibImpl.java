@@ -24,7 +24,7 @@ public class FundDaoHibImpl implements FundDao {
     public List findAll() {
 
         Session session = HibernateUtil.currentSession();
-        
+
         return null;
     }
 
@@ -40,21 +40,43 @@ public class FundDaoHibImpl implements FundDao {
 
     @Override
     public void delete(int fundNo) {
+        Session session = HibernateUtil.currentSession();
+        Transaction transaction = session.beginTransaction();
+        Fund fund = session.get(Fund.class,fundNo);
+        session.delete(fund);
+        transaction.commit();
+        HibernateUtil.closeSession();
 
     }
 
     @Override
     public void update(Fund fund) {
-
+        Session session = HibernateUtil.currentSession();
+        Transaction transaction = session.beginTransaction();
+        Fund fundupdate = session.get(Fund.class,fund.getId());
+        //为什么传的是id是不是和配置文件有关？
+        fundupdate.setName(fund.getName());
+        fundupdate.setPrice(fund.getPrice());
+        fundupdate.setDescription(fund.getDescription());
+        fundupdate.setStatus(fund.getStatus());
+        session.flush();
+        transaction.commit();
+        HibernateUtil.closeSession();
     }
 
     @Override
     public Fund findById(int fundNo) {
-        return null;
+        Session session = HibernateUtil.currentSession();
+        Fund fund = session.get(Fund.class,fundNo);
+        HibernateUtil.closeSession();
+        return fund;
     }
 
     @Override
     public List findByPage(int pageNo, int pageSize) {
+        Session session = 
+
+
         return null;
     }
 

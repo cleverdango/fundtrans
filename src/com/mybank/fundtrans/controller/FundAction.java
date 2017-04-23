@@ -37,15 +37,15 @@ public class FundAction extends ActionSupport {
     }
 
     public String delete(){
-        fundDao.delete(fund.getId());
+        fundDao2.delete(fund.getId());
         return SUCCESS;
     }
     public String update(){
-        fundDao.update(fund);
+        fundDao2.update(fund);
         return SUCCESS;
     }
     public String preUpdate(){
-        fund = fundDao.findById(fundId);
+        fund = fundDao2.findById(fundId);
         return "prepared";
     }
     public void setPageNo(Integer pageNo) {
