@@ -52,8 +52,8 @@ public class FundDaoJDBCImpl implements FundDao {
         conn = JDBCUtil.getConnection();
         //2.写sql语句
         String sql = "insert into fund(name,description,price,status,createTime) value(?,?,?,?,?)";
-        //3.创建PreparedStatement
         try {
+            //3.创建PreparedStatement
             //4.给sql变量赋值
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, fund.getName());
@@ -181,6 +181,7 @@ public class FundDaoJDBCImpl implements FundDao {
             ResultSet rs = pstmt.executeQuery();
             if (rs.next()) {
                 count=rs.getInt(1);
+
             }
         } catch (SQLException e) {
             // TODO Auto-generated catch block

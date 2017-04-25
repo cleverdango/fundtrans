@@ -28,6 +28,7 @@ public class FundServlet extends HttpServlet {
 
         String type = request.getParameter("type"); // step1
         FundDao fundDao = new FundDaoJDBCImpl();
+
         switch (type) {
             case "1":
                 //add
