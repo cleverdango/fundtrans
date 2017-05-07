@@ -2,34 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e402d67-4913-4663-8b2b-f8033b651e3f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mybank/fundtrans/dao/ClientDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mybank/fundtrans/dao/ClientDaoHibImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mybank/fundtrans/dao/ClientDaoHibImplTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mybank/fundtrans/dao/FinAccDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mybank/fundtrans/dao/FinAccDaoHibImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mybank/fundtrans/dao/FinAccDaoHibImplTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mybank/fundtrans/dao/FinAccTransDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mybank/fundtrans/dao/FinAccTransHibImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mybank/fundtrans/dao/FundHoldingDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mybank/fundtrans/dao/FundHoldingDaoHibImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mybank/fundtrans/dao/FundTransDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mybank/fundtrans/dao/FundTransDaoHibImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mybank/fundtrans/domain/Client.hbm.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mybank/fundtrans/domain/Client.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mybank/fundtrans/domain/FinAcc.hbm.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mybank/fundtrans/domain/FinAcc.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mybank/fundtrans/domain/FinAccTrans.hbm.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mybank/fundtrans/domain/FinAccTrans.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mybank/fundtrans/domain/FundHolding.hbm.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mybank/fundtrans/domain/FundHolding.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mybank/fundtrans/domain/FundTrans.hbm.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mybank/fundtrans/domain/FundTrans.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Struts_2_2_3_20_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Struts_2_2_3_20_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fundtrans.iml" afterPath="$PROJECT_DIR$/fundtrans.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/struts.xml" afterPath="$PROJECT_DIR$/src/struts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/fund/fund_list.jsp" afterPath="$PROJECT_DIR$/web/fund/fund_list.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index/left.jsp" afterPath="$PROJECT_DIR$/web/index/left.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mybank/fundtrans/controller/ClientAction.java" afterPath="$PROJECT_DIR$/src/com/mybank/fundtrans/controller/ClientAction.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,7 +17,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5274102">
+    <splitter split-orientation="horizontal" split-proportion="0.5661626">
       <split-first>
         <leaf>
           <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
@@ -73,8 +46,8 @@
           <file leaf-file-name="FundAction.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/mybank/fundtrans/controller/FundAction.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="701">
-                  <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+                <state relative-caret-position="1140">
+                  <caret line="82" column="1" lean-forward="true" selection-start-line="82" selection-start-column="1" selection-end-line="82" selection-end-column="1" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#1419#1420#0" expanded="true" />
@@ -131,10 +104,22 @@
           <file leaf-file-name="ClientAction.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/mybank/fundtrans/controller/ClientAction.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+                <state relative-caret-position="864">
+                  <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                    <element signature="e#1024#1025#0" expanded="true" />
+                    <element signature="e#1053#1054#0" expanded="true" />
+                    <element signature="e#1086#1087#0" expanded="true" />
+                    <element signature="e#1115#1116#0" expanded="true" />
+                    <element signature="e#1154#1155#0" expanded="true" />
+                    <element signature="e#1186#1187#0" expanded="true" />
+                    <element signature="e#1230#1231#0" expanded="true" />
+                    <element signature="e#1266#1267#0" expanded="true" />
+                    <element signature="e#1310#1311#0" expanded="true" />
+                    <element signature="e#1346#1347#0" expanded="true" />
+                    <element signature="e#1399#1400#0" expanded="true" />
+                    <element signature="e#1441#1442#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -1077,16 +1062,16 @@
       <workItem from="1493182323798" duration="1250000" />
       <workItem from="1493858884444" duration="647000" />
       <workItem from="1494138257926" duration="11000" />
-      <workItem from="1494138303154" duration="8362000" />
+      <workItem from="1494138303154" duration="9400000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149062000" />
+    <option name="totallyTimeSpent" value="150100000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="2762" height="1770" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1108,7 +1093,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07600793" sideWeight="0.55677086" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07600793" sideWeight="0.55677086" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20150943" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1606,18 +1591,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mybank/fundtrans/controller/FundAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="701">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1419#1420#0" expanded="true" />
-            <element signature="e#1455#1456#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mybank/fundtrans/dao/ClientDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -1628,10 +1601,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mybank/fundtrans/controller/ClientAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="864">
+          <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1024#1025#0" expanded="true" />
+            <element signature="e#1053#1054#0" expanded="true" />
+            <element signature="e#1086#1087#0" expanded="true" />
+            <element signature="e#1115#1116#0" expanded="true" />
+            <element signature="e#1154#1155#0" expanded="true" />
+            <element signature="e#1186#1187#0" expanded="true" />
+            <element signature="e#1230#1231#0" expanded="true" />
+            <element signature="e#1266#1267#0" expanded="true" />
+            <element signature="e#1310#1311#0" expanded="true" />
+            <element signature="e#1346#1347#0" expanded="true" />
+            <element signature="e#1399#1400#0" expanded="true" />
+            <element signature="e#1441#1442#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mybank/fundtrans/controller/FundAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="82" column="1" lean-forward="true" selection-start-line="82" selection-start-column="1" selection-end-line="82" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1419#1420#0" expanded="true" />
+            <element signature="e#1455#1456#0" expanded="true" />
           </folding>
         </state>
       </provider>
