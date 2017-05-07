@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.mybank.fundtrans.domain">
+	<class name="FundTrans" table="fund_transinfo">
+		<id name="id">
+			<generator class="identity" />
+		</id>
+		<property name="type" />
+		<property name="amount" />
+		<property name="price" />
+		<property name="createTime" />
+
+		<many-to-one name="finAcc" class="FinAcc">
+			<column name="accId" />
+		</many-to-one>
+
+		<many-to-one name="fund" class="Fund">
+			<column name="fundId" />
+		</many-to-one>
+	</class>
+</hibernate-mapping>

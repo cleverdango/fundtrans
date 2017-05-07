@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.mybank.fundtrans.domain">
+	<class name="FinAcc" table="financial_account">
+		<id name="id">
+			<generator class="identity"/>
+		</id>
+		<property name="password"/>
+		<property name="amount" />
+		<property name="status"/>
+		<property name="createTime" />	
+		
+		<many-to-one name="client" unique="true">
+			<column name="idcard"/>
+		</many-to-one>
+		
+		<!-- 默认延迟加载lazy="true" -->
+		<set name="finAccTrans" inverse="true" lazy="false">
+			<key column="accId"/>
+			<one-to-many class="FinAccTrans"/> 
+		</set>
+		
+		<set name="funds" table="fund_holding">
+			<key column="accId" ></key>
+			<many-to-many class="Fund" column="fundId"/>
+		</set>
+		
+	</class>
+</hibernate-mapping>

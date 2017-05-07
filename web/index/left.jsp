@@ -87,7 +87,7 @@
 							客户信息管理
 					</a>
 						<ul>
-							<li><a href="" target="dmMain">新客户开户</a></li>
+							<li><a href="/client/client_add.jsp" target="dmMain">新客户开户</a></li>
 							<li><a href="" target="dmMain">客户信息列表</a></li>
 						</ul></li>
 

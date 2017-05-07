@@ -43,5 +43,6 @@
     </orderEntry>
     <orderEntry type="library" name="Struts2" level="project" />
     <orderEntry type="library" name="Struts 2-2.3.20.1" level="project" />
+    <orderEntry type="library" name="Hibernate 5.2.9-5.2.9" level="project" />
   </component>
 </module>

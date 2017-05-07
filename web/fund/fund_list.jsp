@@ -32,12 +32,7 @@
         <td>操作</td>
     </tr>
     <%
-
-        //FundDao fundDao = new FundDaoJDBCImpl();
-
-        //List<Fund> funds = (List<Fund>)request.getAttribute("fundList");
         String status = "";
-        //List<Fund> funds = fundDao.findAll();
         PageBean pageBean = (PageBean)request.getAttribute("fundList");
         List<Fund> funds = pageBean.getData();
         for (Fund fund : funds) {
