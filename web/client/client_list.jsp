@@ -28,13 +28,36 @@
 <body>
 <h2 class="text-center">客户产品查询结果</h2>
 <table class="table table-striped">
-
     <tr>
-        <td>客户编号</td>
+
         <td>客户姓名</td>
-        <td>客户可用资产</td>
-        <td>客户客户总资产</td>
+        <td>客户性别</td>
+        <td>客户邮箱</td>
+        <td>客户爱好</td>
+        <td>客户电话</td>
+        <td>客户创建时间</td>
     </tr>
+    <%
+        Client client = (Client)request.getAttribute("client");
+        List <Client> clients = (List <Client>)request.getAttribute("clients");
+        for (Client newclient:clients){
+    %>
+    <tr>
 
-
+        <td><%=newclient.getName()%></td>
+        <td><%=newclient.getSex()%></td>
+        <td><%=newclient.getEmail()%></td>
+        <td><%=newclient.getHobby()%></td>
+        <td><%=newclient.getPhone()%></td>
+        <td><%=newclient.getCreateTime()%></td>
+        <td>
+            <a href="client/preUpdate.action?IDCard=<%=newclient.getIDCard() %>">修改</a>
+            <a href="client/deleteClient.action?client.IDCard=<%=newclient.getIDCard() %>">删除</a>
+        </td>
+    </tr>
+    <%
+        }
+    %>
+</table>
+</body>
 </html>

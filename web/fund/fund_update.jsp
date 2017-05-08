@@ -1,6 +1,7 @@
 <%@ page import="com.mybank.fundtrans.dao.FundDao" %>
 <%@ page import="com.mybank.fundtrans.dao.FundDaoJDBCImpl" %>
 <%@ page import="com.mybank.fundtrans.domain.Fund" %>
+<%@ page import="com.mybank.fundtrans.domain.Client" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%
@@ -37,7 +38,7 @@
     <%
 
 
-        Fund fund = (Fund)request.getAttribute("Fund");
+        Fund fund = (Fund) request.getAttribute("Fund");
 
     %>
     <form name="form1" action="fund/updateFund.action" method="post"

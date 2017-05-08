@@ -28,9 +28,9 @@ public class Client {
 	private String hobby; // 客户爱好
 	private Date createTime; // 客户创建时间
 	//一对一 FinAcc
-	@OneToOne(targetEntity=FinAcc.class,mappedBy="client")
-	@Cascade(CascadeType.ALL)
-	private FinAcc finAcc;
+	//@OneToOne(targetEntity=FinAcc.class,mappedBy="client")
+	//@Cascade(CascadeType.ALL)
+	//private FinAcc finAcc;
 	
 	public String getIDCard() {
 		return IDCard;
@@ -80,11 +80,9 @@ public class Client {
 	public void setCreateTime(Date createTime) {
 		this.createTime = createTime;
 	}
-	public FinAcc getFinAcc() {
-		return finAcc;
-	}
-	public void setFinAcc(FinAcc finAcc) {
-		this.finAcc = finAcc;
-	}
-	
+	//public FinAcc getFinAcc() {return finAcc;	}
+//	public void setFinAcc(FinAcc finAcc) {
+//		this.finAcc = finAcc;
+//	}
+//
 }

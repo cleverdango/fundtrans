@@ -37,12 +37,14 @@
         <action name="fund_add">
             <result name="success">/fund/fund_add.jsp</result>
         </action>
+    </package>
 
-        <!--客户类-->
+    <package name="client" namespace="/client" extends="struts-default">
+
         <action name="*Client" class="com.mybank.fundtrans.controller.ClientAction"
                 method="{1}">
             <result name="success" type="chain">showClient</result><!-- 默认的type是dispatcher -->
-            <result name="renderClientList">/Client/Client_list.jsp</result>
+            <result name="renderClientList">/client/client_list.jsp</result>
 
         </action>
 
@@ -53,11 +55,6 @@
         <action name="client_add">
             <result name="success">/client/client_add.jsp</result>
         </action>
-
-
-        <!-- 用于链接请求 -->
-
-
     </package>
 
     <!--<include file="example.xml"/> -->

@@ -47,14 +47,14 @@
 		-->
 		 
 		<!-- 罗列所有映射文件  -->
-		<mapping resource="com/mybank/fundtrans/domain/Fund.hbm.xml" />	 
-		<!-- 
+		<mapping resource="com/mybank/fundtrans/domain/Fund.hbm.xml" />
 		<mapping resource="com/mybank/fundtrans/domain/Client.hbm.xml" />
+
 		<mapping resource="com/mybank/fundtrans/domain/FinAcc.hbm.xml" />
 		<mapping resource="com/mybank/fundtrans/domain/FundHolding.hbm.xml" /> 
 		<mapping resource="com/mybank/fundtrans/domain/FinAccTrans.hbm.xml" />
 		<mapping resource="com/mybank/fundtrans/domain/FundTrans.hbm.xml" /> 
-		 -->
+
 		
 	</session-factory>
 </hibernate-configuration>

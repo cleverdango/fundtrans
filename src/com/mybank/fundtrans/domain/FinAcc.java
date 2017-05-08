@@ -27,7 +27,7 @@ import org.hibernate.annotations.FetchMode;
 public class FinAcc {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	// @Column(name = "id")
+	@Column(name = "id")
 	private int id; // 账户编号
 	private String password; // 账户密码
 	private Double amount; // 账号金额

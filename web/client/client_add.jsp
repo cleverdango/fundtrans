@@ -38,7 +38,7 @@ To change this template use File | Settings | File Templates.
 </div>
 
 <div class="content-box-content">
-    <form name="form1" action="client/addclient.action" method="post"
+    <form name="form1" action="client/addClient.action" method="post"
           onSubmit="return checkNull()">
         <p>
             身份证号：<input class="text-input large-input" type="text"
@@ -50,8 +50,8 @@ To change this template use File | Settings | File Templates.
         </p>
         <p>
             性别：
-            <input type="radio" name="client.sex" value="Y" checked/>男
-            <input type="radio" name="client.sex" value="N"/>女
+            <input type="radio" name="client.sex" value="M" checked/>男
+            <input type="radio" name="client.sex" value="F"/>女
 
         </p>
         <p>
@@ -69,8 +69,8 @@ To change this template use File | Settings | File Templates.
                       name="client.email"/>
         </p>
         <p>
-            爱好<textarea class="text-input textarea" rows="16" cols="50"
-                        name="client.hobby"></textarea>
+            爱好<input class="text-input large-input" type="text"
+                     name="client.hobby"/>
         </p>
 
         <p>

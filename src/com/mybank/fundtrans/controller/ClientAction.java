@@ -6,6 +6,7 @@ import com.mybank.fundtrans.domain.Client;
 import com.opensymphony.xwork2.ActionSupport;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by yazawanico on 2017/5/7.
@@ -14,7 +15,7 @@ public class ClientAction extends ActionSupport{
     private Client client;
     private String IDCard;
     private ClientDao clientDao = new ClientDaoHibImpl();
-
+    private List<Client> clients;
     public String add(){
         client.setCreateTime(new Date());
         clientDao.insert(client);
@@ -30,12 +31,11 @@ public class ClientAction extends ActionSupport{
     }
     public String update(){
         clientDao.update(client);
-        return "prepared";
+        return SUCCESS;
     }
     public String preUpdate(){
         client = clientDao.findById(IDCard);
         return "prepared";
-
     }
 
     public Client getClient() {
@@ -48,6 +48,15 @@ public class ClientAction extends ActionSupport{
 
     public ClientDao getClientDao() {
         return clientDao;
+    }
+
+    public List<Client> getClients() {
+       clients = clientDao.findAll();
+        return clients;
+    }
+
+    public void setClients(List<Client> clients) {
+        this.clients = clients;
     }
 
     public void setClient(Client client) {

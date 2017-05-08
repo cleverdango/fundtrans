@@ -15,7 +15,7 @@ public class ClientDaoHibImpl implements ClientDao {
 	public List findAll() {
 		Session session = HibernateUtil.currentSession();
 		String hql = "from Client";
-		Query query =session.createQuery(hql);
+		Query query = session.createQuery(hql);
 		List <Client> clients =query.list();
 		return clients;
 	}
